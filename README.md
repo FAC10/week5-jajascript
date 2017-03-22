@@ -1,23 +1,27 @@
-# week5-jajascript
+# Jajascript Bethnal Green
 
-User story
+Live site: [https://week5-jajascript-bethnal-green.herokuapp.com/](https://week5-jajascript-bethnal-green.herokuapp.com/)
+
+### User story
 
 As a commuter, I would like to see when the trains leave from Bethnal Green station
 
-Homepage
+### Homepage
 
 Columns for Westbound and Eastbound
 
-Architecture
+### Architecture
 
 ![Diagram of architecture]()
 
-Stretch goals
+### Stretch goals
 
 Add input field
 Add other stations
 
-Day 1
+### TFL API
+
+## Day 1
 
 architecture
 

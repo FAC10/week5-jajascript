@@ -21,5 +21,8 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
     "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
   }
 }

@@ -4,7 +4,9 @@
   "description": "jajascript-bethnal-green",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/src/test | tap-spec"
+    "test": "node tests/src/test | tap-spec",
+    "coverage": "istanbul cover tests/src/test.js",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/FAC10/week5-jajascript#readme",
   "devDependencies": {
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.11.0",
     "shot": "^3.4.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",

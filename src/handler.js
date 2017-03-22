@@ -1,7 +1,14 @@
-var fs = require('fs');
-var path = require ('path');
+const fs = require('fs');
+const path = require ('path');
+const tflAPI = require('./tflAPI.js');
+const tflLogic = require('./tflLogic.js');
+const request = require('request');
 
-var handler = module.exports = {};
+const handler = module.exports = {};
+
+// // request module test
+tflAPI.testRequest(request, tflLogic.tflTest);
+
 
 handler.serveHome = function(req, res){
   readFile(res, '/index.html');

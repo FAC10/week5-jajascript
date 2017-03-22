@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/FAC10/week5-jajascript/issues"
   },
-  "homepage": "https://github.com/FAC10/week5-jajascript#readme"
+  "homepage": "https://github.com/FAC10/week5-jajascript#readme",
+  "devDependencies": {
+    "shot": "^3.4.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
 }

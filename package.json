@@ -4,7 +4,8 @@
   "description": "jajascript-bethnal-green",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/src/test | tap-spec"
+    "test": "node tests/src/test | tap-spec",
+    "coverage": "istanbul cover ./test.js"gi
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 const test = require('tape');
 const shot = require('shot');
 const fs = require('fs');
-const router = require('./src/router');
+const router = require('../../src/router');
 
 // INITIAL TEST
 test('Initialise', (t) => {

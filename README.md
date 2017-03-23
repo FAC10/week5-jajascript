@@ -1,5 +1,5 @@
-![Travis-Badge-Build](https://api.travis-ci.org/FAC10/week5-jajascript.svg?branch=master)
-
+[![Travis-Badge-Build](https://api.travis-ci.org/FAC10/week5-jajascript.svg?branch=master)](https://travis-ci.org/FAC10/week5-jajascript)
+[![Code Coverage](https://codecov.io/gh/FAC10/week5-jajascript/branch/master/graph/badge.svg)](https://codecov.io/gh/FAC10/week5-jajascript)
 # Jajascript Bethnal Green
 
 Live site: [https://week5-jajascript-bethnal-green.herokuapp.com/](https://week5-jajascript-bethnal-green.herokuapp.com/)

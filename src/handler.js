@@ -6,10 +6,6 @@ const request = require('request');
 
 const handler = module.exports = {};
 
-// // request module test
-tflAPI.testRequest(request, tflLogic.tflTest);
-
-
 handler.serveHome = function(req, res){
   readFile(res, '/index.html');
 };
@@ -43,4 +39,15 @@ handler.serveError = function (req, res){
   res.writeHead(404,{'Content-Type': 'text/html'});
   res.write('<h1>404 Page Requested Cannot Be Found<h1>');
   res.end();
+};
+
+
+const serveTFL = function(req, res) {
+  var timesObject = tflAPI.testRequest(request, tflLogic.tflTest);
+  res.writeHead(200, { 'Content-Type': 'text/plain'});
+  res.end(JSON.stringify(timesObject));
+}
+
+module.exports = {
+  serveTFL
 };

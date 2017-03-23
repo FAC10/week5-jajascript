@@ -90,13 +90,20 @@ h1 {
 }
 
 .train-info_header {
-  width: 50%;
   background-color: grey;
   /*border: 1px orange solid;*/
   /*font-size: 0;*/
   display: inline-block;
   text-align: center;
   font-size: 1.2rem;
+}
+
+.destination {
+  width: 60%;
+}
+
+.departure {
+  width: 40%
 }
 
 .append-data {
@@ -107,10 +114,20 @@ h1 {
 
 /* styles created in js */
 .west-dest-unit,
+.east-dest-unit {
+  width: 60%;
+}
+
+.west-dep-unit,
+.east-dep-unit {
+  width: 40%;
+}
+
+.west-dest-unit,
 .west-dep-unit,
 .east-dest-unit,
 .east-dep-unit {
   font-size: 1rem;
-  width: 50%;
   display: inline-block;
+  padding: 0.5rem;
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.1.1.css">
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture">
+
+    <!-- HTML REQUIRED FOR TESTING BELOW (within qunit-fixture div) -->
+
+    <div class="traintimes-wrapper">
+
+      <section class='westbound traintimes'>
+
+        <header class="traintimes-header">
+          <h2>Westbound<h2>
+        </header>
+
+        <article class='train-info'>
+          <div class='train-info_header destination'>
+            <h3>Destination:</h3>
+          </div>
+
+          <div class='train-info_header departure'>
+            <h3>Departs In:</h3>
+          </div>
+
+          <div class="append-data" id="westbound-data">
+            <!-- append westbound trains -->
+          </div>
+
+        </article>
+      </section>
+
+
+      <section class='eastbound traintimes'>
+
+        <header class="traintimes-header">
+          <h2>Eastbound<h2>
+        </header>
+
+        <article class='train-info'>
+          <div class='train-info_header destination'>
+            <h3>Destination:</h3>
+          </div>
+          <div class='train-info_header departure'>
+            <h3>Departs In:</h3>
+          </div>
+
+          <div class="append-data" id="eastbound-data">
+            <!-- append eastbound trains -->
+          </div>
+
+        </article>
+      </section>
+
+    </div>
+
+    <script src="../../public/main.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-2.1.1.js"></script>
+    <script src="frontendTests.js"></script>
+  </body>
+</html>

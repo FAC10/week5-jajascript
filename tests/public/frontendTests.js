@@ -10,6 +10,10 @@ QUnit.test('Test that secToMin returns the correct output, input = 121', functio
 QUnit.test('Test that secToMin returns the correct output, input = 79', function(assert) {
   assert.equal(secToMin(79), '1:19', '79 returns 1:19! Yay, our test works!');
 });
+
+QUnit.test('Test that secToMin returns the correct output, input = 60', function(assert) {
+  assert.equal(secToMin(60), '1:00', '60 returns 1:00! Yay, our test works!');
+});
 // QUnit.test('Test that getUserInput returns correct userInput', function(assert) {
 //     var event = {
 //       target: {

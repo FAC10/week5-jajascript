@@ -12,8 +12,12 @@ function tflTest(error, data) {
   sorted.forEach((value) => {
     if (value[0] === 'Westbound - Platform 1') {
       westbound.push(value);
-    } else {
+    }
+    else if (value[0] === 'Eastbound - Platform 2') {
       eastbound.push(value);
+    }
+    else {
+      return new Error;
     }
   });
   var tflObj = {};

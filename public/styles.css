@@ -1,11 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   background-color: #000;
+  height: 100%;
+}
+
+.main-container {
+  width: 80%;
+  min-height: 100%;
+  margin: auto;
+  background-color: blue;
+  font-size: 0;
 }
 
 h1 {
-  position:relative;
-  width: 100%
-  margin: 0 auto;
   color: #fff;
   text-align: center;
+  padding: 1em 0 1em 0;
+  font-size: 2rem;
+}
+
+.traintimes {
+  width: 50%;
+  min-height: 100vh;
+  background-color: red;
+  border: 1px orange solid;
+  font-size: 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.train-info {
+  font-size: 0;
+}
+
+.train-info_header {
+  width: 50%;
+  background-color: grey;
+  border: 1px orange solid;
+  font-size: 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.append-data {
+  font-size: 0;
+  background: yellow;
+  height: 100%;
 }

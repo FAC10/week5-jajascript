@@ -73,3 +73,15 @@ Heroku
 
 make sure port is process.env.PORT || 4000
 start script that says 'node src/server.js'
+
+## Installation instructions
+
+ - Clone this repo and cd into it
+
+ - `git clone git@github.com:FAC10/week5-jajascript.git`
+
+ - Run `npm install` to install all dependencies
+
+ - Run `npm run devStart` to start the server using Nodemon (which will automatically restart Node when changes are detected in your files)
+
+ - Navigate to http://localhost:4000/ in your browser

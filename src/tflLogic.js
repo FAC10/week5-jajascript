@@ -1,4 +1,8 @@
-function tflTest(data) {
+function tflTest(error, data) {
+  if (error) {
+    return new Error ('There is another stranger in the house!');
+  }
+  else {
   let westbound = [];
   let eastbound = [];
   var arr = data.map((value)=>[value.platformName, value.destinationName, value.timeToStation]);
@@ -12,7 +16,12 @@ function tflTest(data) {
       eastbound.push(value);
     }
   });
-  console.log(westbound);
+  var tflObj = {};
+  tflObj['west'] = westbound;
+  tflObj['east'] = eastbound;
+  console.log(tflObj);
+  return tflObj;
+  }
 }
 
 module.exports = {

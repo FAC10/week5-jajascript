@@ -37,7 +37,7 @@ function appendData(data) {
   data.west.forEach((e) => {
     var westDestination = document.createElement('div');
     westDestination.className = 'west-dest-unit';
-    westDestination.innerHTML = e[1] + ' s';
+    westDestination.innerHTML = e[1];
     westResults.appendChild(westDestination);
 
     var westDepartures = document.createElement('div');
@@ -49,7 +49,7 @@ function appendData(data) {
   data.east.forEach((e) => {
     var eastDestination = document.createElement('div');
     eastDestination.className = 'east-dest-unit';
-    eastDestination.innerHTML = e[1] + ' s';
+    eastDestination.innerHTML = e[1];
     eastResults.appendChild(eastDestination);
 
     var eastDepartures = document.createElement('div');

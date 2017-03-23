@@ -34,23 +34,23 @@ Specs:
 
 - [x] Your server should contain a minimum of 2 routes
 
-- [ ] We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
+- [x] We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
 
 - [x] Test your server by injecting fake HTTP requests using Shot.
 
-- [ ] Host your project on heroku, see resources
+- [x] Host your project on heroku, see resources
 
 - [x] Use module.exports and require to break a single large server file into smaller modules.
 
 - [x] Consider a good server file structure based on what we have discussed over the week.
 
-- [x] Employ continuous intergration on your project with Travis or a similar tool.
+- [x] Employ continuous integration on your project with Travis or a similar tool.
 
 - [x] Use CodeCov or a similar tool for test coverage.
 
 - [x] Display continuous integration and code coverage badges on your project README.
 
-- [ ] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
+- [x] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
 
 **TFL API**
 
@@ -68,3 +68,8 @@ The final part of our API URL specifies the direction we want train times for i.
 The return object from the API call is an array of objects containing lots of useful information!
 
 We are using the 'towards' key from the TFL api, as this is clearer than destination name.
+
+Heroku
+
+make sure port is process.env.PORT || 4000
+start script that says 'node src/server.js'

@@ -1,3 +1,12 @@
+/*
+Colour palette:
+  #2B2D42 - Gunmetal
+  #D90368 - Dogward Rose
+  #8C98AD - Gray-Blue
+  #EDF2F4 - Anti-Flash White
+  #0DAB76 - Green (Munsell)
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +14,11 @@
 
 html {
   height: 100%;
+  background-color: #EDF2F4;
 }
 
 body {
-  background-color: #000;
+  background-color: #EDF2F4;
   height: 100%;
 }
 
@@ -16,7 +26,7 @@ body {
   width: 80%;
   min-height: 100%;
   margin: auto;
-  background-color: blue;
+  /*background-color: blue;*/
   font-size: 0;
 }
 

@@ -12,14 +12,21 @@ Colour palette:
   margin: 0;
 }
 
-html {
+html,
+body {
   height: 100%;
-  background-color: #EDF2F4;
+  background-color: #fff;
 }
 
-body {
-  background-color: #EDF2F4;
-  height: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
@@ -31,23 +38,53 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #D90368;
   text-align: center;
   padding: 1em 0 1em 0;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.traintimes-wrapper {
+  background: purple;
+  padding: 1em;
+  border: teal 1px solid;
+  width: 100%;
+  font-size: 0;
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.traintimes-header {
+  font-size: 1.5rem;
+  background: pink;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
 }
 
 .traintimes {
   width: 50%;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: red;
-  border: 1px orange solid;
+  /*border: 1px orange solid;*/
   font-size: 0;
   display: inline-block;
   text-align: center;
   font-size: 16px;
+  position: absolute;
 }
 
+.westbound {
+  left: 0;
+  top: 0;
+}
+
+.eastbound {
+  right: 0;
+  top: 0;
+}
 .train-info {
   font-size: 0;
 }
@@ -55,16 +92,16 @@ h1 {
 .train-info_header {
   width: 50%;
   background-color: grey;
-  border: 1px orange solid;
-  font-size: 0;
+  /*border: 1px orange solid;*/
+  /*font-size: 0;*/
   display: inline-block;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 
 .append-data {
-  font-size: 0;
-  background: yellow;
+  /*font-size: 0;*/
+  /*background: yellow;*/
   height: 100%;
 }
 

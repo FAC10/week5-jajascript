@@ -2,19 +2,35 @@ const test = require('tape');
 const shot = require('shot');
 const fs = require('fs');
 const router = require('../../src/router');
+const tflLogic = require('../../src/tflLogic.js');
 
 // INITIAL TEST
 test('Initialise', (t) => {
   let num = 2
   t.equal(num, 2, 'Should return 2');
   t.end(); // Remember to call t.end() after every test call, to ensure tests run in order. You can also investigate t.plan() in the docs
-})
+});
+test('Object filtering testing', (t) => {
+  let emptyObject = [{platformName: 'Westbound platform 2'}];
+  let expectedEmpty = {west:[], east:[]};
+  let objEastEmpty = [{platformName: 'Westbound - Platform 1', towards: 'loughton', timeToStation: 451, station: 'Bethnal Green', BrokenTrain: 101}];
+  let expectedEE = {west: [['Westbound - Platform 1', 'loughton', 451]], east: []};
+  let objWestEmpty = [{platformName: 'Eastbound - Platform 2', towards: 'loughton', timeToStation: 451, station: 'Bethnal Green', BrokenTrain: 101}];
+  let expectedWE = {west: [], east: [['Eastbound - Platform 2', 'loughton', 451]]};
+  t.ok(typeof tflLogic.tflTest(null,objWestEmpty) && typeof (tflLogic.tflTest(null,objEastEmpty)) === 'object');
+  t.ok(Array.isArray(tflLogic.tflTest(null,objEastEmpty).west));
+  t.deepEqual(tflLogic.tflTest(null,emptyObject), expectedEmpty, 'Should return an object with two empy arrays!');
+  t.deepEqual(tflLogic.tflTest(null,objWestEmpty), expectedWE, 'Should avoid BrokenTrain!');
+  t.deepEqual(tflLogic.tflTest(null,objEastEmpty), expectedEE, 'Should avoid BrokenTrain!');
+  t.end();
+});
+
 
 // EXAMPLE SINGLE ROUTE TEST
 const singleRoute = () => {
   // Shot options
   const requireOptions = {url:'/', method:'get'};
-  const responseOptions = {statusCode: 200, headers:{'content-type':'text/html'}};
+  const responseOptions = {statusCode: 200, headers:{'Content-Type':'text/html'}};
 
   // Function call with above options.
   // Optional second argument (string) not included (adds a custom test name).
@@ -24,10 +40,10 @@ const singleRoute = () => {
 
 // EXAMPLE STATIC FILE TESTS
 const singleStaticFile = () => {
-
+  const cwd = process.cwd();
   const requireOptions = {url:'/'};
   const responseOptions = {statusCode: 200};
-  fs.readFile('./public/index.html', 'utf8', (err, file) => {
+  fs.readFile(cwd + '/public/index.html', 'utf8', (err, file) => {
     responseOptions.payload = file;
     testRoute([requireOptions, responseOptions]);
   });
@@ -42,13 +58,18 @@ const singleStaticFile = () => {
 // For example in 'route' the object passes in require options of '/' and 'get'
 // and validates the server response of statusCode '200' and payload 'hello'
 const routesToTest = {
-  route:[{url:'/', method:'get'},{statusCode: 200, headers:{'content-type':'text/html'}}],
-  brokenurl:[{url:'/brokenurl'},{statusCode: 404}],
+  route:[{url:'/', method:'get'},{statusCode: 200, headers:{'Content-Type':'text/html'}}],
+  css:[{url:'/styles.css', method:'get'},{statusCode: 200, headers:{'Content-Type':'text/css'}}],
+  js:[{url:'/main.js', method:'get'},{statusCode: 200, headers:{'Content-Type':'application/javascript'}}],
+  tfl:[{url:'/tfl', method:'get'},{statusCode: 200, headers:{'Content-Type':'application/json'}}],
+  brokenurl:[{url:'/brokenurl'},{statusCode: 404}]
 };
 
 singleRoute();
 
-singleStaticFile();
+singleStaticFile('/');
+singleStaticFile('/styles.css');
+singleStaticFile('/main.js');
 
 testMultipleRoutes(routesToTest);
 
@@ -68,7 +89,7 @@ function testRoute ([reqOptions, resOptions], name = '') {
       (res) => {
         Object.keys(resOptions).forEach(option => {
 
-          // second level options (headers[content-type], etc.)
+          // second level options (headers[Content-Type], etc.)
           if (typeof resOptions[option] === 'object') {
             Object.keys(resOptions[option]).forEach(innerOption => {
               t.equal(res[option][innerOption], resOptions[option][innerOption],

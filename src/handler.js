@@ -24,7 +24,7 @@ const readFile = (res, endpoint) => {
         "jpg": "image/jpg",
         "ico": "image/x-icon"
       }
-      res.writeHead(200, { "content-type": extensionType[extension]});
+      res.writeHead(200, { "Content-Type": extensionType[extension]});
       res.end(file);
     }
   })

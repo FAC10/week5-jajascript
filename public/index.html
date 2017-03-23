@@ -14,26 +14,37 @@
   <h1>FAC TFL Journey Planner</h1>
 </header>
 
-<section class='westbound traintimes'>
-  <h2>Westbound<h2>
-  <article class='train-info'>
-    <div class='train-info_header destination'>
-      <h3>Destination:</h3>
-    </div>
-    <div class='train-info_header departure'>
-      <h3>Departs In:</h3>
-    </div>
+<div class="traintimes-wrapper">
 
-    <!-- append westbound trains -->
-    <div class="append-data" id="westbound-data">
+  <section class='westbound traintimes'>
 
-    </div>
+    <header class="traintimes-header">
+      <h2>Westbound<h2>
+    </header>
 
-  </article>
-</section>
+    <article class='train-info'>
+      <div class='train-info_header destination'>
+        <h3>Destination:</h3>
+      </div>
 
-<section class='eastbound traintimes'>
-    <h2>Eastbound<h2>
+      <div class='train-info_header departure'>
+        <h3>Departs In:</h3>
+      </div>
+
+      <div class="append-data" id="westbound-data">
+        <!-- append westbound trains -->
+      </div>
+
+    </article>
+  </section>
+
+
+  <section class='eastbound traintimes'>
+
+    <header class="traintimes-header">
+      <h2>Eastbound<h2>
+    </header>
+
     <article class='train-info'>
       <div class='train-info_header destination'>
         <h3>Destination:</h3>
@@ -42,14 +53,14 @@
         <h3>Departs In:</h3>
       </div>
 
-      <!-- append eastbound trains -->
       <div class="append-data" id="eastbound-data">
-
+        <!-- append eastbound trains -->
       </div>
 
     </article>
-</section>
+  </section>
 
+</div>
 </main>
 
 <script src="./main.js" charset="utf-8"></script>

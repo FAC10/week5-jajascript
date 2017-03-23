@@ -4,55 +4,17 @@
 
 Live site: [https://week5-jajascript-bethnal-green.herokuapp.com/](https://week5-jajascript-bethnal-green.herokuapp.com/)
 
+An app that uses the TFL API to display arrival time predictions at Bethnal Green Underground station (Westbound and Eastbound).
+
 ### User story
 
-As a commuter, I would like to see when the trains leave from Bethnal Green station
-
-### Homepage
-
-Columns for Westbound and Eastbound
+As a commuter who **only** uses Bethnal Green Underground station, I would like to see when the trains leave from Bethnal Green station, so that I can make sure I arrive at the station at the right time
 
 ### Architecture
 
 ![Diagram of architecture]()
 
-### Stretch goals
-
-Add input field
-Add other stations
-
-## Day 1
-
-architecture
-setting up travis, codecov, tests
-heroku
-
-Specs:
-
-- [x] Use at least 1 API
-- [x] Make your API calls from the back-end using the Request module (or one you build yourself)
-
-- [x] Your server should contain a minimum of 2 routes
-
-- [x] We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
-
-- [x] Test your server by injecting fake HTTP requests using Shot.
-
-- [x] Host your project on heroku, see resources
-
-- [x] Use module.exports and require to break a single large server file into smaller modules.
-
-- [x] Consider a good server file structure based on what we have discussed over the week.
-
-- [x] Employ continuous integration on your project with Travis or a similar tool.
-
-- [x] Use CodeCov or a similar tool for test coverage.
-
-- [x] Display continuous integration and code coverage badges on your project README.
-
-- [x] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
-
-**TFL API**
+### TFL API
 
 TFL Arrival of Things (buses, tubes etc):
 (https://blog.tfl.gov.uk/2015/12/07/unified-api-part-5-aot-arrivals-of-things/)
@@ -65,16 +27,76 @@ We then need to specify which station we want information for. In this particula
 
 The final part of our API URL specifies the direction we want train times for i.e. inbound (West) or outbound (East).
 
-The return object from the API call is an array of objects containing lots of useful information!
+The return object from the API call is an array of objects containing lots of useful information! Specifically, we return:
 
-We are using the 'towards' key from the TFL api, as this is clearer than destination name.
+- `platformName` - Westbound or Eastbound
 
-Heroku
+- `towards` - where the train is heading towards (we originally used `destinationName` but found that `towards` would make more sense for the user)
 
-make sure port is process.env.PORT || 4000
-start script that says 'node src/server.js'
+- `timeToStation` - the time, in seconds, until the train reaches Bethnal Green
 
-## Installation instructions
+### Stretch goals
+
+- Expand our app for users who may use stations other than Bethnal Green
+- Add input field for user to specify other stations
+
+### Day 1
+
+- Discuss app purpose and architecture
+- Create initial folder structure and files
+- Set up Codecov, Travis, Istanbul and initial tests using tape and shot
+- Set up Heroku
+- Spike on how to use TFL API
+
+### Day 2
+
+- Enable back-end to pass relevant data to the front-end
+- Add more specific back-end tests
+- Add styling and DOM manipulation to display data
+
+### Specification
+
+- [x] Use at least 1 API
+- [x] Make your API calls from the back-end using the Request module (or one you build yourself)
+- [x] Your server should contain a minimum of 2 routes
+- [x] We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
+- [x] Test your server by injecting fake HTTP requests using Shot.
+- [x] Host your project on heroku, see resources
+- [x] Use module.exports and require to break a single large server file into smaller modules.
+- [x] Consider a good server file structure based on what we have discussed over the week.
+- [x] Employ continuous integration on your project with Travis or a similar tool.
+- [x] Use CodeCov or a similar tool for test coverage.
+- [x] Display continuous integration and code coverage badges on your project README.
+- [x] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
+
+### Heroku
+
+Things to remember for next time!
+
+- Make sure that `port` is declared in `server.js` as below, in order for successful deployment on Heroku. Heroku needs `process.env.PORT`, as it won't recognise `4000`.
+
+  `var port = process.env.PORT || 4000;`
+
+- Ensure that there is a `start` script in package.json, as below.
+
+```  
+"scripts": {
+    "start": "node src/server.js"
+  }
+```
+- It is also ok to use `nodemon` in the `start` script, but you must ensure that `nodemon` is listed in dependencies, not just devDependencies. See example below.
+
+```  
+"scripts": {
+    "start": "nodemon src/server.js"
+},
+"dependencies": {
+    "nodemon": "^1.11.0"
+}
+```
+
+
+### Installation instructions
 
  - Clone this repo and cd into it
 

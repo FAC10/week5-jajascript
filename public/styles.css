@@ -57,3 +57,13 @@ h1 {
   background: yellow;
   height: 100%;
 }
+
+/* styles created in js */
+.west-dest-unit,
+.west-dep-unit,
+.east-dest-unit,
+.east-dep-unit {
+  font-size: 1rem;
+  width: 50%;
+  display: inline-block;
+}

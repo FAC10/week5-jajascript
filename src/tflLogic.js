@@ -5,7 +5,7 @@ function tflTest(error, data) {
   else {
   let westbound = [];
   let eastbound = [];
-  var arr = data.map((value)=>[value.platformName, value.destinationName, value.timeToStation]);
+  var arr = data.map((value)=>[value.platformName, value.towards, value.timeToStation]);
   var sorted = arr.sort((a, b) => {
     return a[2] - b[2];
   })
@@ -19,7 +19,6 @@ function tflTest(error, data) {
   var tflObj = {};
   tflObj['west'] = westbound;
   tflObj['east'] = eastbound;
-  console.log(tflObj);
   return tflObj;
   }
 }

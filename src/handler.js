@@ -42,12 +42,8 @@ handler.serveError = function (req, res){
 };
 
 
-const serveTFL = function(req, res) {
+handler.serveTFL = function(req, res) {
   var timesObject = tflAPI.testRequest(request, tflLogic.tflTest);
   res.writeHead(200, { 'Content-Type': 'text/plain'});
   res.end(JSON.stringify(timesObject));
 }
-
-module.exports = {
-  serveTFL
-};

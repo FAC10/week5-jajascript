@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Lato:300,400');
+/*font-family: 'Comfortaa', cursive;
+font-family: 'Lato', sans-serif;*/
 /*
 Colour palette:
   #2B2D42 - Gunmetal
@@ -10,12 +13,16 @@ Colour palette:
 * {
   box-sizing: border-box;
   margin: 0;
+  color: #2B2D42;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 html,
 body {
   height: 100%;
   background-color: #fff;
+  min-width: 320px;
 }
 
 h1,
@@ -29,6 +36,12 @@ section,
 article {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
 }
 
 .main-container {
@@ -65,7 +78,7 @@ h1 {
   text-align: center;
   display: inline-block;
   height: 100%;
-  border-bottom: 5px solid purple;
+  /*border-bottom: 5px solid purple;*/
 }
 
 .traintimes {
@@ -78,6 +91,45 @@ h1 {
   text-align: center;
   font-size: 1rem;
   margin-bottom: 2rem;
+}
+
+.train-info {
+  font-size: 0;
+}
+
+.train-info_header {
+  /*background-color: grey;*/
+  /*border: 1px orange solid;*/
+  /*font-size: 0;*/
+  display: inline-block;
+  text-align: center;
+  font-size: 1.414rem;
+  padding: 0.354em;
+  width: 50%;
+  border-bottom: 1px solid;
+
+}
+
+.append-data {
+  /*font-size: 0;*/
+  /*background: yellow;*/
+  height: 100%;
+}
+
+.west-dest-unit,
+.west-dep-unit,
+.east-dest-unit,
+.east-dep-unit {
+  font-size: 1.1rem;
+  display: inline-block;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.west-dep-unit,
+.east-dep-unit {
+  font-weight: 400;
+  color:#D90368;
 }
 
 @media(min-width: 900px){
@@ -97,52 +149,24 @@ h1 {
     top: 0;
     border-left: 1px solid purple;
   }
-}
 
-.train-info {
-  font-size: 0;
-}
+  .destination {
+    width: 60%;
+  }
 
-.train-info_header {
-  /*background-color: grey;*/
-  /*border: 1px orange solid;*/
-  /*font-size: 0;*/
-  display: inline-block;
-  text-align: center;
-  font-size: 1.414rem;
-  padding: 0.354em;
-}
 
-.destination {
-  width: 60%;
-}
 
-.departure {
-  width: 40%
-}
+  .departure {
+    width: 40%
+  }
 
-.append-data {
-  /*font-size: 0;*/
-  /*background: yellow;*/
-  height: 100%;
-}
+  .west-dest-unit,
+  .east-dest-unit {
+    width: 60%;
+  }
 
-/* styles created in js */
-.west-dest-unit,
-.east-dest-unit {
-  width: 60%;
-}
-
-.west-dep-unit,
-.east-dep-unit {
-  width: 40%;
-}
-
-.west-dest-unit,
-.west-dep-unit,
-.east-dest-unit,
-.east-dep-unit {
-  font-size: 1rem;
-  display: inline-block;
-  padding: 0.5rem;
+  .west-dep-unit,
+  .east-dep-unit {
+    width: 40%;
+  }
 }

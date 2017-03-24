@@ -21,7 +21,7 @@ function secToMin(time) {
     s = '0' + s;
   }
   if (m < 10) {
-    m = '0' + m;
+    m = '&nbsp;' + m;
   }
   return m + ':' + s;
 }

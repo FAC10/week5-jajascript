@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Lato:300,400');
+
 /*
 Colour palette:
   #2B2D42 - Gunmetal
   #D90368 - Dogward Rose
   #8C98AD - Gray-Blue
   #EDF2F4 - Anti-Flash White
-  #0DAB76 - Green (Munsell)
+  #6B6D76 - Nickel
 */
 
 * {
   box-sizing: border-box;
   margin: 0;
+  color: #2B2D42;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 html,
 body {
   height: 100%;
   background-color: #fff;
+  min-width: 320px;
 }
 
 h1,
@@ -24,30 +30,36 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+section,
+article {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
 }
 
 .main-container {
   width: 80%;
   min-height: 100%;
   margin: auto;
-  /*background-color: blue;*/
   font-size: 0;
 }
 
 h1 {
   color: #D90368;
   text-align: center;
-  padding: 1em 0 1em 0;
-  font-size: 3rem;
+  padding: 2em 0 1em 0;
+  font-size: 3.998rem;
 }
 
+
 .traintimes-wrapper {
-  background: purple;
   padding: 1em;
-  border: teal 1px solid;
   width: 100%;
   font-size: 0;
   position: relative;
@@ -56,61 +68,102 @@ h1 {
 }
 
 .traintimes-header {
-  font-size: 1.5rem;
-  background: pink;
+  font-size: 1.999rem;
+  padding: 0.5em;
   width: 100%;
   text-align: center;
   display: inline-block;
   height: 100%;
+  color: #6B6D76;
+}
+
+.traintimes-header-text {
+  color: #6B6D76;
 }
 
 .traintimes {
-  width: 50%;
+  width: 100%;
   min-height: 100%;
-  background-color: red;
-  /*border: 1px orange solid;*/
   font-size: 0;
   display: inline-block;
   text-align: center;
-  font-size: 16px;
-  position: absolute;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
-.westbound {
-  left: 0;
-  top: 0;
-}
-
-.eastbound {
-  right: 0;
-  top: 0;
-}
 .train-info {
   font-size: 0;
 }
 
 .train-info_header {
-  width: 50%;
-  background-color: grey;
-  /*border: 1px orange solid;*/
-  /*font-size: 0;*/
   display: inline-block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.414rem;
+  padding: 0.354em;
+  width: 50%;
+  border-bottom: 1px solid #6B6D76;
 }
 
 .append-data {
-  /*font-size: 0;*/
-  /*background: yellow;*/
   height: 100%;
 }
 
-/* styles created in js */
 .west-dest-unit,
 .west-dep-unit,
 .east-dest-unit,
 .east-dep-unit {
-  font-size: 1rem;
-  width: 50%;
+  font-size: 1.1rem;
   display: inline-block;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.west-dep-unit,
+.east-dep-unit {
+  font-weight: 400;
+  color:#D90368;
+}
+
+
+@media(min-width: 900px){
+  .traintimes {
+    width: 50%;
+    position: absolute;
+  }
+
+  .westbound {
+    left: 0;
+    top: 0;
+  }
+
+  .eastbound {
+    right: 0;
+    top: 0;
+  }
+
+  .train-info-left {
+    border-right: 1px solid #6B6D76;
+  }
+
+  .train-info-right {
+    border-left: 1px solid #6B6D76;
+  }
+
+  .destination {
+    width: 60%;
+  }
+
+  .departure {
+    width: 40%
+  }
+
+  .west-dest-unit,
+  .east-dest-unit {
+    width: 60%;
+  }
+
+  .west-dep-unit,
+  .east-dep-unit {
+    width: 40%;
+  }
 }

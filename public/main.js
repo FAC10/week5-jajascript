@@ -28,10 +28,6 @@ function appendData(data) {
   var eastResults = document.getElementById('eastbound-data');
   var long = Math.max(data.west.length, data.east.length);
   var short = Math.min(data.west.length, data.east.length);
-  // var diff = long - short;
-  // while (long > short) {
-  //
-  // }
 
 
   westResults.innerHTML = '';

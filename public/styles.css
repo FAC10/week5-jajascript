@@ -24,7 +24,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+section,
+article {
   margin: 0;
   padding: 0;
 }
@@ -41,13 +43,13 @@ h1 {
   color: #D90368;
   text-align: center;
   padding: 1em 0 1em 0;
-  font-size: 3rem;
+  font-size: 3.998rem;
 }
 
 .traintimes-wrapper {
-  background: purple;
+  /*background: purple;*/
   padding: 1em;
-  border: teal 1px solid;
+  /*border: teal 1px solid;*/
   width: 100%;
   font-size: 0;
   position: relative;
@@ -56,46 +58,59 @@ h1 {
 }
 
 .traintimes-header {
-  font-size: 1.5rem;
-  background: pink;
+  font-size: 1.999rem;
+  padding: 0.5em;
+  /*background: pink;*/
   width: 100%;
   text-align: center;
   display: inline-block;
   height: 100%;
+  border-bottom: 5px solid purple;
 }
 
 .traintimes {
-  width: 50%;
+  width: 100%;
   min-height: 100%;
-  background-color: red;
+  /*background-color: red;*/
   /*border: 1px orange solid;*/
   font-size: 0;
   display: inline-block;
   text-align: center;
-  font-size: 16px;
-  position: absolute;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
-.westbound {
-  left: 0;
-  top: 0;
+@media(min-width: 900px){
+  .traintimes {
+    width: 50%;
+    position: absolute;
+  }
+
+  .westbound {
+    left: 0;
+    top: 0;
+    border-right: 1px solid purple;
+  }
+
+  .eastbound {
+    right: 0;
+    top: 0;
+    border-left: 1px solid purple;
+  }
 }
 
-.eastbound {
-  right: 0;
-  top: 0;
-}
 .train-info {
   font-size: 0;
 }
 
 .train-info_header {
-  background-color: grey;
+  /*background-color: grey;*/
   /*border: 1px orange solid;*/
   /*font-size: 0;*/
   display: inline-block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.414rem;
+  padding: 0.354em;
 }
 
 .destination {

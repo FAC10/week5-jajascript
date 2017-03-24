@@ -1,7 +1,7 @@
 const request = require('request');
 
 // Helper
-const testRequest = (module, callback) => {
+const TFLRequest = (module, callback) => {
   module('https://api.tfl.gov.uk/StopPoint/940GZZLUBLG/Arrivals?mode=tube', function (error, response, body) {
 
     if (error) {
@@ -15,5 +15,5 @@ const testRequest = (module, callback) => {
 };
 
 module.exports = {
-  testRequest: testRequest
+  TFLRequest: TFLRequest
 }

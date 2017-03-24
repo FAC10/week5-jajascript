@@ -6,10 +6,10 @@ module.exports = function(req, res) {
   if (endpoint === '/') {
     handler.serveHome(req,res);
   }
-  else if(endpoint.indexOf('tfl') !== -1) {
+  else if (endpoint.indexOf('tfl') !== -1) {
     handler.serveTFL(req, res);
   }
-  else if(endpoint.indexOf('.html') === -1) {
+  else if (endpoint.indexOf('.html') === -1) {
     handler.servePublic(req, res);
   }
   else {

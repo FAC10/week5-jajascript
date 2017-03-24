@@ -55,9 +55,10 @@ h2 {
 h1 {
   color: #D90368;
   text-align: center;
-  padding: 1em 0 1em 0;
+  padding: 2em 0 1em 0;
   font-size: 3.998rem;
 }
+
 
 .traintimes-wrapper {
   /*background: purple;*/
@@ -78,9 +79,13 @@ h1 {
   text-align: center;
   display: inline-block;
   height: 100%;
-  /*border-bottom: 5px solid purple;*/
+  /*border: 1px solid purple;*/
+  color: #6B6D76;
 }
 
+.traintimes-header-text {
+  color: #6B6D76;
+}
 .traintimes {
   width: 100%;
   min-height: 100%;
@@ -106,7 +111,7 @@ h1 {
   font-size: 1.414rem;
   padding: 0.354em;
   width: 50%;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #6B6D76;
 
 }
 
@@ -141,13 +146,19 @@ h1 {
   .westbound {
     left: 0;
     top: 0;
-    border-right: 1px solid purple;
   }
 
   .eastbound {
     right: 0;
     top: 0;
-    border-left: 1px solid purple;
+  }
+
+  .train-info-left {
+    border-right: 1px solid #6B6D76;
+  }
+
+  .train-info-right {
+    border-left: 1px solid #6B6D76;
   }
 
   .destination {

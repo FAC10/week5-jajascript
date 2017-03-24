@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Lato:300,400');
-/*font-family: 'Comfortaa', cursive;
-font-family: 'Lato', sans-serif;*/
+
 /*
 Colour palette:
   #2B2D42 - Gunmetal
   #D90368 - Dogward Rose
   #8C98AD - Gray-Blue
   #EDF2F4 - Anti-Flash White
-  #0DAB76 - Green (Munsell)
+  #6B6D76 - Nickel
 */
 
 * {
@@ -48,7 +47,6 @@ h2 {
   width: 80%;
   min-height: 100%;
   margin: auto;
-  /*background-color: blue;*/
   font-size: 0;
 }
 
@@ -61,9 +59,7 @@ h1 {
 
 
 .traintimes-wrapper {
-  /*background: purple;*/
   padding: 1em;
-  /*border: teal 1px solid;*/
   width: 100%;
   font-size: 0;
   position: relative;
@@ -74,23 +70,20 @@ h1 {
 .traintimes-header {
   font-size: 1.999rem;
   padding: 0.5em;
-  /*background: pink;*/
   width: 100%;
   text-align: center;
   display: inline-block;
   height: 100%;
-  /*border: 1px solid purple;*/
   color: #6B6D76;
 }
 
 .traintimes-header-text {
   color: #6B6D76;
 }
+
 .traintimes {
   width: 100%;
   min-height: 100%;
-  /*background-color: red;*/
-  /*border: 1px orange solid;*/
   font-size: 0;
   display: inline-block;
   text-align: center;
@@ -103,21 +96,15 @@ h1 {
 }
 
 .train-info_header {
-  /*background-color: grey;*/
-  /*border: 1px orange solid;*/
-  /*font-size: 0;*/
   display: inline-block;
   text-align: center;
   font-size: 1.414rem;
   padding: 0.354em;
   width: 50%;
   border-bottom: 1px solid #6B6D76;
-
 }
 
 .append-data {
-  /*font-size: 0;*/
-  /*background: yellow;*/
   height: 100%;
 }
 
@@ -136,6 +123,7 @@ h1 {
   font-weight: 400;
   color:#D90368;
 }
+
 
 @media(min-width: 900px){
   .traintimes {
@@ -164,8 +152,6 @@ h1 {
   .destination {
     width: 60%;
   }
-
-
 
   .departure {
     width: 40%

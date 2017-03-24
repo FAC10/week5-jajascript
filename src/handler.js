@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require ('path');
-const tflAPI = require('./tflAPI.js');
+const TFLAPI = require('./tflAPI.js');
 const tflLogic = require('./tflLogic.js');
 const request = require('request');
 
@@ -43,7 +43,7 @@ handler.serveError = function (req, res){
 
 
 handler.serveTFL = function(req, res) {
-  tflAPI.TFLRequest(request, function (err, data) {
+  TFLAPI.TFLRequest(request, function (err, data) {
     var timesObject = tflLogic.TFLSortData(err, data);
     res.writeHead(200, { 'Content-Type': 'application/json'});
     res.end(JSON.stringify(timesObject));

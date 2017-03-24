@@ -5,8 +5,8 @@ function tflTest(error, data) {
   else {
   let westbound = [];
   let eastbound = [];
-  var arr = data.map((value)=>[value.platformName, value.towards, value.timeToStation]);
-  var sorted = arr.sort((a, b) => {
+  let arr = data.map((value)=>[value.platformName, value.towards, value.timeToStation]);
+  let sorted = arr.sort((a, b) => {
     return a[2] - b[2];
   })
   sorted.forEach((value) => {

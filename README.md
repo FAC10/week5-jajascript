@@ -12,7 +12,7 @@ As a commuter who **only** uses Bethnal Green Underground station, I would like 
 
 ### Architecture
 
-![Diagram of architecture]()
+![Diagram of architecture](public/assets/Architecture.png)
 
 ### TFL API
 

@@ -10,6 +10,41 @@ An app that uses the TFL API to display arrival time predictions at Bethnal Gree
 
 As a commuter who **only** uses Bethnal Green Underground station, I would like to see when the trains leave from Bethnal Green station, so that I can make sure I arrive at the station at the right time
 
+### Specification
+
+- [x] Use at least 1 API
+- [x] Make your API calls from the back-end using the Request module (or one you build yourself)
+- [x] Your server should contain a minimum of 2 routes
+- [x] We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
+- [x] Test your server by injecting fake HTTP requests using Shot.
+- [x] Host your project on heroku, see resources
+- [x] Use module.exports and require to break a single large server file into smaller modules.
+- [x] Consider a good server file structure based on what we have discussed over the week.
+- [x] Employ continuous integration on your project with Travis or a similar tool.
+- [x] Use CodeCov or a similar tool for test coverage.
+- [x] Display continuous integration and code coverage badges on your project README.
+- [x] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
+
+### Stretch goals
+
+- [ ] Expand our app for users who may use stations other than Bethnal Green
+- [ ] Add input field for user to specify other stations
+- [ ] Auto-refresh
+
+### Day 1
+
+- Discuss app purpose and architecture
+- Create initial folder structure and files
+- Set up Codecov, Travis, Istanbul and initial tests using tape and shot
+- Set up Heroku
+- Spike on how to use TFL API
+
+### Day 2
+
+- Enable back-end to pass relevant data to the front-end
+- Add more specific back-end tests
+- Add styling and DOM manipulation to display data
+
 ### Architecture
 
 ![Diagram of architecture](public/assets/Architecture.png)
@@ -34,40 +69,6 @@ The return object from the API call is an array of objects containing lots of us
 - `towards` - where the train is heading towards (we originally used `destinationName` but found that `towards` would make more sense for the user)
 
 - `timeToStation` - the time, in seconds, until the train reaches Bethnal Green
-
-### Stretch goals
-
-- Expand our app for users who may use stations other than Bethnal Green
-- Add input field for user to specify other stations
-
-### Day 1
-
-- Discuss app purpose and architecture
-- Create initial folder structure and files
-- Set up Codecov, Travis, Istanbul and initial tests using tape and shot
-- Set up Heroku
-- Spike on how to use TFL API
-
-### Day 2
-
-- Enable back-end to pass relevant data to the front-end
-- Add more specific back-end tests
-- Add styling and DOM manipulation to display data
-
-### Specification
-
-- [x] Use at least 1 API
-- [x] Make your API calls from the back-end using the Request module (or one you build yourself)
-- [x] Your server should contain a minimum of 2 routes
-- [x] We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
-- [x] Test your server by injecting fake HTTP requests using Shot.
-- [x] Host your project on heroku, see resources
-- [x] Use module.exports and require to break a single large server file into smaller modules.
-- [x] Consider a good server file structure based on what we have discussed over the week.
-- [x] Employ continuous integration on your project with Travis or a similar tool.
-- [x] Use CodeCov or a similar tool for test coverage.
-- [x] Display continuous integration and code coverage badges on your project README.
-- [x] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
 
 ### Heroku
 

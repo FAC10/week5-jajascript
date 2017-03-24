@@ -57,6 +57,10 @@ h1 {
   font-size: 3.998rem;
 }
 
+h3 span {
+  font-size: 1rem;
+  color: #D90368;
+}
 
 .traintimes-wrapper {
   padding: 1em;

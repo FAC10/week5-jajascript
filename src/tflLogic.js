@@ -27,6 +27,4 @@ function TFLSortData(error, data) {
   }
 }
 
-module.exports = {
-  TFLSortData: TFLSortData
-}
+module.exports = TFLSortData;

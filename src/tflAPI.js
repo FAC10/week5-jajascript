@@ -14,6 +14,4 @@ const TFLRequest = (module, callback) => {
   });
 };
 
-module.exports = {
-  TFLRequest: TFLRequest
-}
+module.exports = TFLRequest;

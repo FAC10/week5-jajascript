@@ -2,7 +2,7 @@ const test = require('tape');
 const shot = require('shot');
 const fs = require('fs');
 const router = require('../../src/router');
-const tflLogic = require('../../src/tflLogic.js');
+const TFLLogic = require('../../src/tflLogic.js');
 
 // INITIAL TEST
 test('Initialise', (t) => {
@@ -17,11 +17,11 @@ test('Object filtering testing', (t) => {
   let expectedEE = {west: [['Westbound - Platform 1', 'loughton', 451]], east: []};
   let objWestEmpty = [{platformName: 'Eastbound - Platform 2', towards: 'loughton', timeToStation: 451, station: 'Bethnal Green', BrokenTrain: 101}];
   let expectedWE = {west: [], east: [['Eastbound - Platform 2', 'loughton', 451]]};
-  t.ok(typeof tflLogic.TFLSortData(null,objWestEmpty) && typeof (tflLogic.TFLSortData(null,objEastEmpty)) === 'object');
-  t.ok(Array.isArray(tflLogic.TFLSortData(null,objEastEmpty).west));
-  t.deepEqual(tflLogic.TFLSortData(null,emptyObject), expectedEmpty, 'Should return an object with two empy arrays!');
-  t.deepEqual(tflLogic.TFLSortData(null,objWestEmpty), expectedWE, 'Should avoid BrokenTrain!');
-  t.deepEqual(tflLogic.TFLSortData(null,objEastEmpty), expectedEE, 'Should avoid BrokenTrain!');
+  t.ok(typeof TFLLogic.TFLSortData(null,objWestEmpty) && typeof (TFLLogic.TFLSortData(null,objEastEmpty)) === 'object');
+  t.ok(Array.isArray(TFLLogic.TFLSortData(null,objEastEmpty).west));
+  t.deepEqual(TFLLogic.TFLSortData(null,emptyObject), expectedEmpty, 'Should return an object with two empy arrays!');
+  t.deepEqual(TFLLogic.TFLSortData(null,objWestEmpty), expectedWE, 'Should avoid BrokenTrain!');
+  t.deepEqual(TFLLogic.TFLSortData(null,objEastEmpty), expectedEE, 'Should avoid BrokenTrain!');
   t.end();
 });
 

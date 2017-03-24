@@ -20,10 +20,10 @@ function TFLSortData(error, data) {
       return new Error;
     }
   });
-  var tflObj = {};
-  tflObj['west'] = westbound;
-  tflObj['east'] = eastbound;
-  return tflObj;
+  var TFLObj = {};
+  TFLObj['west'] = westbound;
+  TFLObj['east'] = eastbound;
+  return TFLObj;
   }
 }
 

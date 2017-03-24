@@ -8,8 +8,8 @@ const TFLRequest = (module, callback) => {
       return new Error ('There is a stranger in the house!!');
     }
     else {
-    var tflData = JSON.parse(body);
-    callback(null, tflData);
+    var TFLData = JSON.parse(body);
+    callback(null, TFLData);
     }
   });
 };

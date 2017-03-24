@@ -5,5 +5,6 @@ var app = function(req, res){
 };
 
 var port = process.env.PORT || 4000;
-var server = http.createServer(app).listen(port);
-console.log(`Server is listening on port: ${port}`);
+var server = http.createServer(app).listen(port, () => {
+  console.log(`Server is listening on port: ${port}`);
+});

@@ -1,4 +1,4 @@
-function tflTest(error, data) {
+function TFLSortData(error, data) {
   if (error) {
     return new Error ('There is another stranger in the house!');
   }
@@ -20,13 +20,13 @@ function tflTest(error, data) {
       return new Error;
     }
   });
-  var tflObj = {};
-  tflObj['west'] = westbound;
-  tflObj['east'] = eastbound;
-  return tflObj;
+  var TFLObj = {};
+  TFLObj['west'] = westbound;
+  TFLObj['east'] = eastbound;
+  return TFLObj;
   }
 }
 
 module.exports = {
-  tflTest: tflTest
+  TFLSortData: TFLSortData
 }

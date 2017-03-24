@@ -1,4 +1,4 @@
-function tflTest(error, data) {
+function TFLSortData(error, data) {
   if (error) {
     return new Error ('There is another stranger in the house!');
   }
@@ -28,5 +28,5 @@ function tflTest(error, data) {
 }
 
 module.exports = {
-  tflTest: tflTest
+  TFLSortData: TFLSortData
 }

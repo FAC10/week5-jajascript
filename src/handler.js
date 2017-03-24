@@ -44,7 +44,7 @@ handler.serveError = function (req, res){
 
 handler.serveTFL = function(req, res) {
   tflAPI.TFLRequest(request, function (err, data) {
-    var timesObject = tflLogic.tflTest(err, data);
+    var timesObject = tflLogic.TFLSortData(err, data);
     res.writeHead(200, { 'Content-Type': 'application/json'});
     res.end(JSON.stringify(timesObject));
   });

@@ -17,11 +17,11 @@ test('Object filtering testing', (t) => {
   let expectedEE = {west: [['Westbound - Platform 1', 'loughton', 451]], east: []};
   let objWestEmpty = [{platformName: 'Eastbound - Platform 2', towards: 'loughton', timeToStation: 451, station: 'Bethnal Green', BrokenTrain: 101}];
   let expectedWE = {west: [], east: [['Eastbound - Platform 2', 'loughton', 451]]};
-  t.ok(typeof tflLogic.tflTest(null,objWestEmpty) && typeof (tflLogic.tflTest(null,objEastEmpty)) === 'object');
-  t.ok(Array.isArray(tflLogic.tflTest(null,objEastEmpty).west));
-  t.deepEqual(tflLogic.tflTest(null,emptyObject), expectedEmpty, 'Should return an object with two empy arrays!');
-  t.deepEqual(tflLogic.tflTest(null,objWestEmpty), expectedWE, 'Should avoid BrokenTrain!');
-  t.deepEqual(tflLogic.tflTest(null,objEastEmpty), expectedEE, 'Should avoid BrokenTrain!');
+  t.ok(typeof tflLogic.TFLSortData(null,objWestEmpty) && typeof (tflLogic.TFLSortData(null,objEastEmpty)) === 'object');
+  t.ok(Array.isArray(tflLogic.TFLSortData(null,objEastEmpty).west));
+  t.deepEqual(tflLogic.TFLSortData(null,emptyObject), expectedEmpty, 'Should return an object with two empy arrays!');
+  t.deepEqual(tflLogic.TFLSortData(null,objWestEmpty), expectedWE, 'Should avoid BrokenTrain!');
+  t.deepEqual(tflLogic.TFLSortData(null,objEastEmpty), expectedEE, 'Should avoid BrokenTrain!');
   t.end();
 });
 

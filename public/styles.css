@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Lato:300,400');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Lato:300,400|Roboto+Mono');
 
 /*
 Colour palette:
@@ -55,11 +55,6 @@ h1 {
   text-align: center;
   padding: 2em 0 1em 0;
   font-size: 3.998rem;
-}
-
-h3 span {
-  font-size: 1rem;
-  color: #D90368;
 }
 
 .traintimes-wrapper {
@@ -122,12 +117,19 @@ h3 span {
   width: 50%;
 }
 
-.west-dep-unit,
+/*.west-dep-unit,
 .east-dep-unit {
+
+}*/
+span.time-digit {
+  text-align: right;
+  font-family: "Roboto Mono", monospace;
   font-weight: 400;
   color:#D90368;
 }
-
+span.time-unit {
+  font-size: 0.7rem;
+}
 
 @media(min-width: 900px){
   .traintimes {

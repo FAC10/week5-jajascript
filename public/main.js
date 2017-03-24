@@ -20,6 +20,9 @@ function secToMin(time) {
   if (s < 10) {
     s = '0' + s;
   }
+  if (m < 10) {
+    m = '0' + m;
+  }
   return m + ':' + s;
 }
 
@@ -40,7 +43,7 @@ function appendData(data) {
 
     var westDepartures = document.createElement('div');
     westDepartures.className = 'west-dep-unit';
-    westDepartures.innerHTML = secToMin(e[2]);
+    westDepartures.innerHTML = '<span class="time-digit">' + secToMin(e[2]) + '</span> <span class="time-unit">mins</span>';
     westResults.appendChild(westDepartures);
   });
 
@@ -52,7 +55,7 @@ function appendData(data) {
 
     var eastDepartures = document.createElement('div');
     eastDepartures.className = 'east-dep-unit';
-    eastDepartures.innerHTML = secToMin(e[2]);
+    eastDepartures.innerHTML = '<span class="time-digit">' + secToMin(e[2]) + '</span> <span class="time-unit">mins</span>';
     eastResults.appendChild(eastDepartures);
   });
 }

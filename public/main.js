@@ -21,7 +21,6 @@ function secToMin(time) {
 }
 
 function appendData(data) {
-  // console.log(data);
   var westResults = document.getElementById('westbound-data');
   var eastResults = document.getElementById('eastbound-data');
   var long = Math.max(data.west.length, data.east.length);

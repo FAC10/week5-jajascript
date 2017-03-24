@@ -18,9 +18,9 @@ function secToMin(time) {
   var s = time%60;
   var m = Math.floor(time/60);
   if (s < 10) {
-    s = `0${s}`;
+    s = '0' + s;
   }
-  return `${m}:${s}`;
+  return m + ':' + s;
 }
 
 function appendData(data) {
